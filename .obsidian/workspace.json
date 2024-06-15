@@ -1,0 +1,259 @@
+{
+  "main": {
+    "id": "10422e1cab0e935b",
+    "type": "split",
+    "children": [
+      {
+        "id": "ec427a481a4ae071",
+        "type": "split",
+        "children": [
+          {
+            "id": "63afda0f24195953",
+            "type": "tabs",
+            "dimension": 57.30277185501066,
+            "children": [
+              {
+                "id": "75ed282ce8fcc60c",
+                "type": "leaf",
+                "state": {
+                  "type": "mx-webpage",
+                  "state": {
+                    "source": "https://www.youtube.com/watch?v=tivleJzBXag"
+                  }
+                }
+              },
+              {
+                "id": "ba65f9fd1b6aa4ef",
+                "type": "leaf",
+                "state": {
+                  "type": "canvas",
+                  "state": {
+                    "file": "CN/Computer netweok flow.canvas",
+                    "viewState": {
+                      "x": -1107.2905180694934,
+                      "y": 73.60910723889367,
+                      "zoom": -1.4618341088526017
+                    }
+                  }
+                }
+              }
+            ],
+            "currentTab": 1
+          },
+          {
+            "id": "4f667e36db82c33e",
+            "type": "tabs",
+            "dimension": 42.69722814498934,
+            "children": [
+              {
+                "id": "55df794420b51d18",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CN/Signal Encoding Techniques.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "85a561dea6787200",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CN/digital to digital.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "559f73f1c129e639",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CN/NRZ.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5de3f34232a2298b",
+    "type": "split",
+    "children": [
+      {
+        "id": "ffa19a0c2b8c01ba",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7dddf65ebd2fb6f6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5ab551eb17513d0f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "29813a16925a6ed9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "35e0a392b4f31e53",
+    "type": "split",
+    "children": [
+      {
+        "id": "17c3c5914c66f32f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "464a478b0728a02c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CN/Computer netweok flow.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d93d6e4c30e63646",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CN/Computer netweok flow.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e6f61ab25b714f66",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "56080ba47d6eb06c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CN/Computer netweok flow.canvas"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "media-extended:Open media": false
+    }
+  },
+  "active": "ba65f9fd1b6aa4ef",
+  "lastOpenFiles": [
+    "CN/Signal Encoding Techniques.md",
+    "CN/Computer netweok flow.canvas",
+    "Physical Layer.md",
+    "CN/NRZ.md",
+    "Pasted image 20240615101345.png",
+    "Pasted image 20240615101215.png",
+    "Pasted image 20240615100924.png",
+    "CN/digital to digital.md",
+    "Pasted image 20240615100450.png",
+    "Pasted image 20240615100345.png",
+    "CLANG/Storage classes.md",
+    "Pasted image 20240610163054.png",
+    "CLANG/C language.md",
+    "Digital/Media Note - Conversions in number system (base x to base 10)_ Number system in Digital Logic _ GATE 2023.md",
+    "Digital/digital logic.md",
+    "Media Note - Tarik Reacts to 100 Thieves vs FUT Esports _ PLAYOFFS _ VCT Masters Shanghai 2024.md",
+    "Pasted image 20240530215206.png",
+    "valorant/Valorant vods.md",
+    "valorant",
+    "Digital/Media Note - Conversions in number system (base 10 to base x)_ Number system in Digital Logic _ GATE 2023.md",
+    "Tracker.md",
+    "Digital/Media Note - Introduction to number system _ Number system in Digital Logic _ GATE 2023.md",
+    "Photos/Conversions in number system (base 10 to base x)_ Number system in Digital Logic _ GATE 2023PT1M40.976S.webp",
+    "Photos/Conversions in number system (base 10 to base x)_ Number system in Digital Logic _ GATE 2023PT1M53.326S.webp",
+    "Photos/Introduction to number system _ Number system in Digital Logic _ GATE 2023PT46M51.166S.webp",
+    "Photos",
+    "DM/discrete maths.md",
+    "Composition of Functions Answers.md",
+    "Composition of Functions.md",
+    "Toc/Media Note - 4. operations on strings part 2.md",
+    "Toc/Toc videos.md",
+    "Toc/Media Note - 3. operations on strings part 1.md",
+    "Toc/Media Note - 2. basic terms in TOC.md",
+    "2024-05-26.md",
+    "DFA introduction.md",
+    "Toc",
+    "Counting Relations.md",
+    "Drawing 2024-02-16 22.40.49.excalidraw.md",
+    "Untitled.canvas",
+    "Untitled 1.md"
+  ]
+}
