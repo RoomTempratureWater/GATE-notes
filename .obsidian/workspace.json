@@ -26,14 +26,11 @@
                 "id": "ba65f9fd1b6aa4ef",
                 "type": "leaf",
                 "state": {
-                  "type": "canvas",
+                  "type": "markdown",
                   "state": {
-                    "file": "CN/Computer netweok flow.canvas",
-                    "viewState": {
-                      "x": -1107.2905180694934,
-                      "y": 73.60910723889367,
-                      "zoom": -1.4618341088526017
-                    }
+                    "file": "CN/digital to digital.md",
+                    "mode": "source",
+                    "source": false
                   }
                 }
               }
@@ -150,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CN/Computer netweok flow.canvas",
+                "file": "CN/digital to digital.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CN/Computer netweok flow.canvas",
+                "file": "CN/digital to digital.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -190,7 +187,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CN/Computer netweok flow.canvas"
+                "file": "CN/digital to digital.md"
               }
             }
           }
@@ -215,10 +212,11 @@
   },
   "active": "ba65f9fd1b6aa4ef",
   "lastOpenFiles": [
+    "CN/NRZ.md",
     "CN/Signal Encoding Techniques.md",
     "CN/Computer netweok flow.canvas",
+    "CN/Physical Layer.md",
     "Physical Layer.md",
-    "CN/NRZ.md",
     "Pasted image 20240615101345.png",
     "Pasted image 20240615101215.png",
     "Pasted image 20240615100924.png",
@@ -253,7 +251,6 @@
     "Toc",
     "Counting Relations.md",
     "Drawing 2024-02-16 22.40.49.excalidraw.md",
-    "Untitled.canvas",
-    "Untitled 1.md"
+    "Untitled.canvas"
   ]
 }
