@@ -1,0 +1,28 @@
+{
+	"nodes":[
+		{"id":"e27ebb7e8d667eff","type":"file","file":"CN/digital to digital.md","x":-2192,"y":280,"width":282,"height":220},
+		{"id":"87b5e51919890025","type":"file","file":"CN/TDM.md","x":-1622,"y":280,"width":343,"height":200},
+		{"id":"7e2237edabdbc4b9","type":"file","file":"CN/NRZ.md","x":-2360,"y":729,"width":122,"height":117},
+		{"id":"430d17132c7f5779","type":"file","file":"CN/RZ.md","x":-2182,"y":729,"width":194,"height":134},
+		{"id":"2ac83acda1491c73","type":"file","file":"CN/Manchester and Differential manchester.md","x":-1910,"y":729,"width":265,"height":134},
+		{"id":"1fca5620eb13d320","type":"file","file":"CN/Physical Layer.md","x":-1951,"y":-1000,"width":658,"height":560},
+		{"id":"735e079c72f8096c","type":"file","file":"CN/Signal Encoding Techniques.md","x":-2329,"y":-280,"width":341,"height":336},
+		{"id":"bd7466a952e51083","type":"file","file":"CN/Delay.md","x":-1910,"y":-280,"width":329,"height":336},
+		{"id":"814c7f7d2e3635c7","type":"file","file":"CN/Multiplexing.md","x":-1493,"y":-280,"width":400,"height":400},
+		{"id":"b7e78b5a5dcea079","type":"file","file":"CN/Data-link Layer.md","x":-400,"y":-1000,"width":920,"height":560},
+		{"id":"8fce6895c78cd129","type":"file","file":"CN/Error Checking and correction.md","x":-520,"y":-280,"width":400,"height":400},
+		{"id":"f8fdb6ebd56574cd","x":-880,"y":2,"width":320,"height":378,"type":"file","file":"CN/Linear block codes.md"}
+	],
+	"edges":[
+		{"id":"865abd04e182a7aa","fromNode":"735e079c72f8096c","fromSide":"bottom","toNode":"e27ebb7e8d667eff","toSide":"top"},
+		{"id":"4593582a142a4cb2","fromNode":"1fca5620eb13d320","fromSide":"bottom","toNode":"735e079c72f8096c","toSide":"top"},
+		{"id":"90b7aa5504695a0d","fromNode":"e27ebb7e8d667eff","fromSide":"bottom","toNode":"7e2237edabdbc4b9","toSide":"top"},
+		{"id":"77e2c0943b81c1c6","fromNode":"e27ebb7e8d667eff","fromSide":"bottom","toNode":"2ac83acda1491c73","toSide":"top"},
+		{"id":"3b8829cd4d6e98fe","fromNode":"1fca5620eb13d320","fromSide":"bottom","toNode":"bd7466a952e51083","toSide":"top"},
+		{"id":"e2bafcd79138ca26","fromNode":"1fca5620eb13d320","fromSide":"bottom","toNode":"814c7f7d2e3635c7","toSide":"top"},
+		{"id":"05fd07f4671c4cf6","fromNode":"e27ebb7e8d667eff","fromSide":"bottom","toNode":"430d17132c7f5779","toSide":"top"},
+		{"id":"ce689421f164b045","fromNode":"814c7f7d2e3635c7","fromSide":"bottom","toNode":"87b5e51919890025","toSide":"top"},
+		{"id":"41e70d698f0924d4","fromNode":"b7e78b5a5dcea079","fromSide":"bottom","toNode":"8fce6895c78cd129","toSide":"top"},
+		{"id":"d38416fad01109ef","fromNode":"8fce6895c78cd129","fromSide":"left","toNode":"f8fdb6ebd56574cd","toSide":"top"}
+	]
+}

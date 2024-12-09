@@ -4,10 +4,10 @@ digital data --> digital signal
 types of digital signals:
 - unipolar:
 	- all signal levels are on one side of time axis either above or below
-	- ![[Pasted image 20240615100345.png]]
+	- ![[Photos/Pasted image 20240708124535.png]]
 - polar:
 	- signal levels will be on both sides of time axis
-		- ![[Pasted image 20240615100450.png]]
+		- ![[Photos/Pasted image 20240708124612.png]]
 
 
 Polar signal encoding techniques:

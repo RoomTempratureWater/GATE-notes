@@ -13,7 +13,7 @@ Broadband:
 - no collision
 
 types of encoding:
-- Digital to Digital signal [[digital to digital]]
+- [[digital to digital]] signal
 - Digital to Analog
 - Analog to Digital
 - Analog to Analog
