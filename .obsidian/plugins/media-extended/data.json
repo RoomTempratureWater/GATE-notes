@@ -11,18 +11,22 @@
         "protocol": "https:",
         "hostname": "youtu.be",
         "port": ""
-      }
-    ],
-    "mx-url-audio": [],
-    "mx-url-video": [],
-    "mx-webpage": [
+      },
+      {
+        "protocol": "https:",
+        "hostname": "www.youtube.com",
+        "port": ""
+      },
       {
         "protocol": "https:",
         "hostname": "www.youtube.com",
         "pathname": "/watch",
         "port": ""
       }
-    ]
+    ],
+    "mx-url-audio": [],
+    "mx-url-video": [],
+    "mx-webpage": []
   },
   "speedStep": 0.1,
   "loadStrategy": "eager",
