@@ -21,4 +21,10 @@ P.S ->  the size of the strings has to be same for comparison, add 0's infront t
 hamming distance can be calculated by doing an *XOR operation on the strings and then count the number of 1's in the result*
 
 (XOR = dono different = 1, dono same = 0)
+ 
+ *2 Hamming distance means there is  bits which are different*
+### Minimum Hamming distance to detect T bit errors
+
+   If data word is of length 2, and code word is of length 3, so we have one extra redundant bit so we can detect one bit errors, so:
+    *If we want to detect T bits of error, then the  minimum Hamming distance should be T+1*
 

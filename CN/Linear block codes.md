@@ -15,6 +15,13 @@ etc.
 
 we can say these codewords are linear block codes
 
+## Types of linear block codes
+- [[CN/Simple Parity Check Code|Simple Parity Check Code]]
+- [[2D parity check code]]
+- [[Cyclic code]]
+- [[Check sum]]
+
+
 ![[Photos/Pasted image 20240919012231.png]]
 ![[Photos/Pasted image 20240919012250.png]]
 

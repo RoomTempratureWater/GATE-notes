@@ -11,7 +11,9 @@
 		{"id":"814c7f7d2e3635c7","type":"file","file":"CN/Multiplexing.md","x":-1493,"y":-280,"width":400,"height":400},
 		{"id":"b7e78b5a5dcea079","type":"file","file":"CN/Data-link Layer.md","x":-400,"y":-1000,"width":920,"height":560},
 		{"id":"8fce6895c78cd129","type":"file","file":"CN/Error Checking and correction.md","x":-520,"y":-280,"width":400,"height":400},
-		{"id":"f8fdb6ebd56574cd","x":-880,"y":2,"width":320,"height":378,"type":"file","file":"CN/Linear block codes.md"}
+		{"id":"f8fdb6ebd56574cd","type":"file","file":"CN/Linear block codes.md","x":-920,"y":240,"width":400,"height":399},
+		{"id":"89a7cdf2fccbe171","type":"file","file":"CN/Simple Parity Check Code.md","x":-1320,"y":729,"width":400,"height":400},
+		{"id":"bc210c3f43f12d15","x":-880,"y":729,"width":400,"height":400,"type":"file","file":"CN/2D parity check code.md"}
 	],
 	"edges":[
 		{"id":"865abd04e182a7aa","fromNode":"735e079c72f8096c","fromSide":"bottom","toNode":"e27ebb7e8d667eff","toSide":"top"},
@@ -23,6 +25,8 @@
 		{"id":"05fd07f4671c4cf6","fromNode":"e27ebb7e8d667eff","fromSide":"bottom","toNode":"430d17132c7f5779","toSide":"top"},
 		{"id":"ce689421f164b045","fromNode":"814c7f7d2e3635c7","fromSide":"bottom","toNode":"87b5e51919890025","toSide":"top"},
 		{"id":"41e70d698f0924d4","fromNode":"b7e78b5a5dcea079","fromSide":"bottom","toNode":"8fce6895c78cd129","toSide":"top"},
-		{"id":"d38416fad01109ef","fromNode":"8fce6895c78cd129","fromSide":"left","toNode":"f8fdb6ebd56574cd","toSide":"top"}
+		{"id":"103e515a51362aba","fromNode":"8fce6895c78cd129","fromSide":"bottom","toNode":"f8fdb6ebd56574cd","toSide":"top"},
+		{"id":"22521ae895865f07","fromNode":"f8fdb6ebd56574cd","fromSide":"left","toNode":"89a7cdf2fccbe171","toSide":"top"},
+		{"id":"5e5ba76525ff21ae","fromNode":"f8fdb6ebd56574cd","fromSide":"bottom","toNode":"bc210c3f43f12d15","toSide":"top"}
 	]
 }
