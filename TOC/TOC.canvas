@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"dfc0cf499bdaaee4","type":"text","text":"Theory of Computation","x":-512,"y":-1320,"width":352,"height":160},
+		{"id":"23264dcb3be44a92","type":"file","file":"TOC/Terms in TOC.md","x":-1240,"y":-983,"width":202,"height":198},
+		{"id":"1cc760d218f1a041","x":400,"y":-978,"width":320,"height":278,"type":"file","file":"TOC/Turing Machine and Undecidibility.md"},
+		{"id":"c2c4e57cb2de3201","type":"file","file":"TOC/PDA and CFLs.md","x":-160,"y":-978,"width":320,"height":218},
+		{"id":"a96822de94d39001","type":"file","file":"TOC/Finite automata and regular langauges.md","x":-847,"y":-978,"width":335,"height":319}
+	],
+	"edges":[
+		{"id":"0e8b9b046be48944","fromNode":"dfc0cf499bdaaee4","fromSide":"bottom","toNode":"23264dcb3be44a92","toSide":"top"},
+		{"id":"447b7ed5dedbe676","fromNode":"dfc0cf499bdaaee4","fromSide":"bottom","toNode":"a96822de94d39001","toSide":"top"},
+		{"id":"f27e287635ce58a7","fromNode":"dfc0cf499bdaaee4","fromSide":"bottom","toNode":"c2c4e57cb2de3201","toSide":"top"},
+		{"id":"7a24dd71d1baacc4","fromNode":"dfc0cf499bdaaee4","fromSide":"bottom","toNode":"1cc760d218f1a041","toSide":"top"}
+	]
+}

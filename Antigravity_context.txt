@@ -1,0 +1,27 @@
+This is a obsidian notes repository for GATE CSE 2027 preparation, my name is Jonathan.
+
+whenever you are summarizing notes, make sure to include a short note and a long note .md file.
+
+short notes will be in hinglish and they are meant to be used during quick revision later on in my preparation
+
+long notes are for understanding.
+
+each topic has folder and 2 subfolders - one for long notes and one for short notes.
+
+
+use math formatting whenever required.
+put diagrams whenever required.
+
+update tracker.md file for every note added.
+
+tracker.md will have
+
+topic | subtopic | date | long note link | short note link | yt link |
+
+in short and long notes you can add reference questions from the questions-filtered.json file.
+you can use the .py files you created to get the questions from the json
+
+
+add diagrams to short and long notes wherever required and enrich the notes
+
+everytime i ask you to do this, you should create a new LONG note, but SHORT note you need to use your discretion, if you think the content is different and needs a new note, then make a new note else append to the existing one related to the topic/subtopic
