@@ -13,13 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout your notes repo
       - name: Checkout notes repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # 2️⃣ Checkout Quartz source
       - name: Checkout Quartz
         uses: actions/checkout@v4
         with:
@@ -27,32 +25,33 @@ jobs:
           ref: v4
           path: quartz
 
-      # 3️⃣ Setup Node.js
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      # 4️⃣ Install Quartz dependencies
       - name: Install Quartz dependencies
         working-directory: quartz
         run: npm ci
 
-      # 5️⃣ Copy your Quartz config & layout
+      - name: Copy notes to Quartz content
+        run: |
+          rm -rf quartz/content
+          mkdir quartz/content
+          rsync -av --progress . quartz/content/ --exclude quartz --exclude .git --exclude .github --exclude quartz-config
+
       - name: Copy Quartz config
         run: |
           cp quartz-config/quartz.config.ts quartz/quartz.config.ts
           cp quartz-config/quartz.layout.ts quartz/quartz.layout.ts
 
-      # 6️⃣ Build Quartz directly to repo root
-      - name: Build Quartz to root
+      - name: Build Quartz
         working-directory: quartz
         run: |
-          npx quartz build -d ../
+          npx quartz build
 
-      # 7️⃣ Deploy to gh-pages root
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: quartz/public
