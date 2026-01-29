@@ -11,38 +11,42 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout notes repo
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0 // Fetch all history for git info
-      
+          fetch-depth: 0
+
       - name: Checkout Quartz
         uses: actions/checkout@v4
         with:
           repository: jackyzha0/quartz
-          path: quartz
           ref: v4
+          path: quartz
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      
-      - name: Install Dependencies
+
+      - name: Install Quartz dependencies
         working-directory: quartz
         run: npm ci
 
-      - name: Copy Configuration
+      - name: Copy Quartz config
         run: |
           cp quartz-config/quartz.config.ts quartz/quartz.config.ts
           cp quartz-config/quartz.layout.ts quartz/quartz.layout.ts
 
-      - name: Build Quartz
+      - name: Build Quartz (to /site)
         working-directory: quartz
-        run: npx quartz build -d ..
+        run: |
+          mkdir -p site
+          npx quartz build -d ../site
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages (subdir)
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: quartz/public
+          publish_dir: site
