@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 244.5
+    "width": 281.5
   },
   "right": {
     "id": "35e0a392b4f31e53",
@@ -166,8 +166,11 @@
       "media-extended:Open media": false
     }
   },
-  "active": "34631178836afac5",
+  "active": "7dddf65ebd2fb6f6",
   "lastOpenFiles": [
+    "find_questions.py",
+    "DM/short/Graph_Theory_Connectivity_Short.md",
+    "DM/long/Graph_Theory_Connectivity.md",
     "quartz-config/quartz.layout.ts",
     "quartz-config/quartz.config.ts",
     "quartz-config",
@@ -215,9 +218,6 @@
     "OS/FCFS.md",
     "OS/SJF.md",
     "OS/Non-Premptive scheduling.md",
-    "TOC/Turing Machine and Undecidibility.md",
-    "TOC/TOC.canvas",
-    "TOC/PDA and CFLs.md",
-    "TOC"
+    "TOC/TOC.canvas"
   ]
 }
