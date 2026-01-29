@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>GATE Notes</title>
+      <link>https://gate2027.com</link>
+      <description>Last 10 notes on GATE Notes</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>Valorant vods</title>
+    <link>https://gate2027.com/valorant/Valorant-vods</link>
+    <guid>https://gate2027.com/valorant/Valorant-vods</guid>
+    <description><![CDATA[ # Tarik Reacts to 100 Thieves vs FUT Esports | PLAYOFFS | VCT Masters Shanghai 2024. ]]></description>
+    <pubDate>Thu, 29 Jan 2026 15:40:10 GMT</pubDate>
+  </item><item>
+    <title>Finite automata and regular langauges</title>
+    <link>https://gate2027.com/TOC/Finite-automata-and-regular-langauges</link>
+    <guid>https://gate2027.com/TOC/Finite-automata-and-regular-langauges</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Thu, 29 Jan 2026 15:40:10 GMT</pubDate>
+  </item><item>
+    <title>PDA and CFLs</title>
+    <link>https://gate2027.com/TOC/PDA-and-CFLs</link>
+    <guid>https://gate2027.com/TOC/PDA-and-CFLs</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Thu, 29 Jan 2026 15:40:10 GMT</pubDate>
+  </item><item>
+    <title>Terms in TOC</title>
+    <link>https://gate2027.com/TOC/Terms-in-TOC</link>
+    <guid>https://gate2027.com/TOC/Terms-in-TOC</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Thu, 29 Jan 2026 15:40:10 GMT</pubDate>
+  </item><item>
+    <title>Turing Machine and Undecidibility</title>
+    <link>https://gate2027.com/TOC/Turing-Machine-and-Undecidibility</link>
+    <guid>https://gate2027.com/TOC/Turing-Machine-and-Undecidibility</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Thu, 29 Jan 2026 15:40:10 GMT</pubDate>
+  </item><item>
+    <title>digital logic</title>
+    <link>https://gate2027.com/Digital/digital-logic</link>
+    <guid>https://gate2027.com/Digital/digital-logic</guid>
+    <description><![CDATA[  Introduction to number system | Number system in Digital Logic | GATE 2023 Syllabus of Digital Logic | Digital Logic | GATE 2023 Conversions in number system (base 10 to base x)| Number system in Digital Logic | GATE 2023 Conversions in number system (base x to base 10)| Number system in Digital Lo... ]]></description>
+    <pubDate>Thu, 29 Jan 2026 15:40:10 GMT</pubDate>
+  </item><item>
+    <title>Drawing 2024-06-16 18.28.06.excalidraw</title>
+    <link>https://gate2027.com/Excalidraw/Drawing-2024-06-16-18.28.06.excalidraw</link>
+    <guid>https://gate2027.com/Excalidraw/Drawing-2024-06-16-18.28.06.excalidraw</guid>
+    <description><![CDATA[ ⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠. ]]></description>
+    <pubDate>Thu, 29 Jan 2026 15:40:10 GMT</pubDate>
+  </item><item>
+    <title>Drawing 2024-12-18 14.07.24.excalidraw</title>
+    <link>https://gate2027.com/Excalidraw/Drawing-2024-12-18-14.07.24.excalidraw</link>
+    <guid>https://gate2027.com/Excalidraw/Drawing-2024-12-18-14.07.24.excalidraw</guid>
+    <description><![CDATA[ ⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠ Text Elements. ]]></description>
+    <pubDate>Thu, 29 Jan 2026 15:40:10 GMT</pubDate>
+  </item><item>
+    <title>CPU scheduling</title>
+    <link>https://gate2027.com/OS/CPU-scheduling</link>
+    <guid>https://gate2027.com/OS/CPU-scheduling</guid>
+    <description><![CDATA[ www.youtube.com/watch CPU scheduling is done by Short term scheduler Dispatcher is used for context switching context switching is a overhead on the system. ]]></description>
+    <pubDate>Thu, 29 Jan 2026 15:40:10 GMT</pubDate>
+  </item><item>
+    <title>FCFS</title>
+    <link>https://gate2027.com/OS/FCFS</link>
+    <guid>https://gate2027.com/OS/FCFS</guid>
+    <description><![CDATA[ First come first serve process id PID burst time BT arrival time AT if arrival time is same, tiebreak is done by the shortest process id turn around time = PFT - PAT pft = process finish time pat = process arival time waiting time = turn around time - burst time response time = process start time - ... ]]></description>
+    <pubDate>Thu, 29 Jan 2026 15:40:10 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>

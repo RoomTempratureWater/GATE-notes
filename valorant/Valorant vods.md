@@ -1,1 +1,0 @@
-[# Tarik Reacts to 100 Thieves vs FUT Esports | PLAYOFFS | VCT Masters Shanghai 2024](https://youtu.be/wx53wg_3kJA?si=JBdCJHho02Zuc1sk)

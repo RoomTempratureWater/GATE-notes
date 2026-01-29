@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>data structures and algorithm</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="GATE Notes"/><meta property="og:title" content="data structures and algorithm"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="data structures and algorithm"/><meta name="twitter:description" content="Syllabus of Data Structures and Algorithms | DSA for GATE | GATE 2023 Introduction to data structures and algorithms | DSA | Part 1 | GATE 2023 Introduction to data structures and algorithms | DSA | Part 2 | GATE 2023 How to analyze algorithm | Aposteriori analysis | analysis of algorithm How to an..."/><meta property="og:description" content="Syllabus of Data Structures and Algorithms | DSA for GATE | GATE 2023 Introduction to data structures and algorithms | DSA | Part 1 | GATE 2023 Introduction to data structures and algorithms | DSA | Part 2 | GATE 2023 How to analyze algorithm | Aposteriori analysis | analysis of algorithm How to an..."/><meta property="og:image:alt" content="Syllabus of Data Structures and Algorithms | DSA for GATE | GATE 2023 Introduction to data structures and algorithms | DSA | Part 1 | GATE 2023 Introduction to data structures and algorithms | DSA | Part 2 | GATE 2023 How to analyze algorithm | Aposteriori analysis | analysis of algorithm How to an..."/><meta property="og:image" content="https://gate2027.com/static/og-image.png"/><meta property="og:image:url" content="https://gate2027.com/static/og-image.png"/><meta name="twitter:image" content="https://gate2027.com/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="gate2027.com"/><meta property="og:url" content="https://gate2027.com/DSA/data-structures-and-algorithm"/><meta property="twitter:url" content="https://gate2027.com/DSA/data-structures-and-algorithm"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="Syllabus of Data Structures and Algorithms | DSA for GATE | GATE 2023 Introduction to data structures and algorithms | DSA | Part 1 | GATE 2023 Introduction to data structures and algorithms | DSA | Part 2 | GATE 2023 How to analyze algorithm | Aposteriori analysis | analysis of algorithm How to an..."/><meta name="generator" content="Quartz"/><link href="../index.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvR0FURS1ub3Rlcy9HQVRFLW5vdGVzL3F1YXJ0ei9xdWFydHovY29tcG9uZW50cy9zdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><script src="../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://gate2027.com/index.xml"/></head><body data-slug="DSA/data-structures-and-algorithm"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">GATE Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-53"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-53" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../DSA/">DSA</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>data structures and algorithm</a></div></nav><h1 class="article-title">data structures and algorithm</h1><p show-comma="true" class="content-meta"><time datetime="2026-01-29T15:40:10.433Z">Jan 29, 2026</time><span>11 min read</span></p><ul class="tags"><li><a href="../tags/PROGRAMMING" class="internal tag-link">PROGRAMMING</a></li><li><a href="../tags/PLACEMENTS" class="internal tag-link">PLACEMENTS</a></li><li><a href="../tags/queue" class="internal tag-link">queue</a></li></ul></div></div><article class="popover-hint"><p><a href="https://www.youtube.com/watch?v=dBe1EnUpBaA&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=1&amp;pp=iAQB" class="external">
+Syllabus of Data Structures and Algorithms | DSA for GATE | GATE 2023
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=RGtcScoceho&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=2&amp;pp=iAQB" class="external">
+Introduction to data structures and algorithms | DSA | Part 1 | GATE 2023
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=Di6pK1cGBRg&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=3&amp;pp=iAQB" class="external">
+Introduction to data structures and algorithms | DSA | Part 2 | GATE 2023
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=5qfjzWw3SGY&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=4&amp;pp=iAQB" class="external">
+How to analyze algorithm | Aposteriori analysis | analysis of algorithm
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=k6oVQP6RIZY&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=5&amp;pp=iAQB" class="external">
+How to analyze algorithm | Apriori analysis | analysis of algorithm
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=c4jBPu-XkKk&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=6&amp;pp=iAQB" class="external">
+How to analyze algorithm | Asymptotic Notations (part 1) | analysis of algorithm
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=s8Uqq6TxXHY&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=7&amp;pp=iAQB" class="external">
+How to analyze algorithm | Asymptotic Notations (part 2) | Big O notation | analysis of algorithm
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=ZJ9WS_AFO1w&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=8&amp;pp=iAQB" class="external">
+How to analyze algorithm | Asymptotic Notations (part 3) | Big O notation | analysis of algorithm
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=DluUU8n9kdo&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=9&amp;pp=iAQB" class="external">
+How to analyze algorithm | Asymptotic Notations (part 4) | Big O notation | analysis of algorithm
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=iuWd-HP_Rqk&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=10&amp;pp=iAQB" class="external">
+How to analyze algorithm | Asymptotic Notations (part 5) | Big omega notation |analysis of algorithm
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=InR4Q1MgpqQ&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=11&amp;pp=iAQB" class="external">
+How to analyze algorithm | Asymptotic Notations (part 6) | Theta notation | analysis of algorithm
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=G6Tpbs65ITQ&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=12&amp;pp=iAQB" class="external">
+How to analyze algorithm | Asymptotic Notations (part 7) | small o and  small omega (ω) notation
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=7RT9lMClbbw&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=13&amp;pp=iAQB" class="external">
+How to analyze algorithm | Properties of Asymptotic Notations (part 1)
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=t_47R2Tx8aI&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=14&amp;pp=iAQB" class="external">
+How to analyze algorithm | Properties of Asymptotic Notations (part 2)
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=TeEMF_fWNL8&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=15&amp;pp=iAQB" class="external">
+How to analyze algorithm | Properties of Asymptotic Notations (part 3)
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=51dK_67igKo&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=16&amp;pp=iAQB" class="external">
+How to Analyze Algorithm | Practice Questions on Asymptotic Notations | Analysis of Algorithm
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=vtKaD9IIQls&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=17&amp;pp=iAQB" class="external">
+How to Analyze Algorithm | Analysis of Algorithm  Practice Questions on Asymptotic Notations  #2
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=GafZnmDdQvQ&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=18&amp;pp=iAQB" class="external">
+How to Analyze Algorithm | Analysis of Algorithm  Practice Questions on Asymptotic Notations  #3
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=rwIf7AJ4xW0&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=19&amp;pp=iAQB" class="external">
+How to Analyze Algorithm | Analysis of Algorithm  Practice Questions on Asymptotic Notations  #4
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=0VdhrFWd19g&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=20&amp;pp=iAQB" class="external">
+How to Analyze Algorithm | Analysis of Algorithm  Practice Questions on Asymptotic Notations  #5
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=nWnlXL0N5aY&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=21&amp;pp=iAQB" class="external">
+How to Analyze Algorithm | Analysis of Algorithm  Practice Questions on Asymptotic Notations  #6
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=QZ0QNlF4Wnc&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=22&amp;pp=iAQB" class="external">
+How to Analyze Algorithm | Analysis of Algorithm  Practice Questions on Asymptotic Notations  #7
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=p6LQm8FVDqA&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=23&amp;pp=iAQB" class="external">
+How to Analyze Algorithm | Analysis of Algorithm  Practice Questions on Asymptotic Notations  #8
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=bS8aAvc0KoA&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=24&amp;pp=iAQB" class="external">
+How to Analyze Algorithm | Analysis of Algorithm  Practice Questions on Asymptotic Notations  #9
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=jaz95U4oBC0&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=25&amp;pp=iAQB" class="external">
+Finding Time Complexity | Analysis and Calculation | Time Complexity of iterative Algo | part 1
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=au6G8rBm2OE&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=26&amp;pp=iAQB" class="external">
+Finding Time Complexity | Analysis and Calculation | Time Complexity of iterative Algo | part 2
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=IsZ7mcv6orU&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=27&amp;pp=iAQB" class="external">
+Finding Time Complexity | Analysis and Calculation | Time Complexity of iterative Algo | part 3
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=bax9nRzJhxc&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=28&amp;pp=iAQB" class="external">
+Finding Time Complexity | Analysis and Calculation | Time Complexity of iterative Algo | part 4
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=HKvf2oZzkMs&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=29&amp;pp=iAQB" class="external">
+Finding Time Complexity | Analysis and Calculation | Time Complexity of iterative Algo | part 5
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=iVu4k3Q5jMo&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=30&amp;pp=iAQB" class="external">
+Finding Time Complexity | Analysis and Calculation | Time Complexity of iterative Algo | part 6
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=AdYR0qw0jfU&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=31&amp;pp=iAQB" class="external">
+Finding Time Complexity | Analysis and Calculation | Time Complexity of iterative Algo | part 7
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=uR-WrLMmQ4w&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=32&amp;pp=iAQB" class="external">
+Finding Space Complexity | Analysis and Calculation | Iterative Algorithms
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=yTKqJunZpto&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=33&amp;pp=iAQB" class="external">
+Finding Space and Time Complexity of Recursive Algorithms | Analysis and Calculation | Part 1
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=rBdhZ1SZhe0&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=34&amp;pp=iAQB" class="external">
+Finding Space and Time Complexity of Recursive Algorithms | Analysis and Calculation | Part 2
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=1fN_ORsDJWk&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=35&amp;pp=iAQB" class="external">
+Finding Space and Time Complexity of Recursive Algorithms | Analysis and Calculation | Part 3
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=7pAbio_msNE&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=36&amp;pp=iAQB" class="external">
+Finding Space and Time Complexity of Recursive Algorithms | Analysis and Calculation | Part 4
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=CAs2x_U6jco&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=37&amp;pp=iAQB" class="external">
+Finding Space and Time Complexity of Recursive Algorithms | Analysis and Calculation | Part 5
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=98MmwkLMLvk&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=38&amp;pp=iAQB" class="external">
+Finding Space and Time Complexity of Recursive Algorithms | Analysis and Calculation | Part 6
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=NhGof5MNgYQ&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=39&amp;pp=iAQB" class="external">
+Finding Space and Time Complexity of Recursive Algorithms | fibonacci series exact complexity |#7
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=Mkx8168BgGA&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=40&amp;pp=iAQB" class="external">
+Tower of Hanoi solved using Recursion | Part 1
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=e-ZSzrd98K8&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=41&amp;pp=iAQB" class="external">
+Tower of Hanoi solved using Recursion | Part 2
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=fJr8c0cmw9c&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=42&amp;pp=iAQB" class="external">
+SUBSTITUTION METHOD FOR SOLVING ANY RECURRENCE IN HINDI | part 1
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=gjjpvXHToxs&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=43&amp;pp=iAQB" class="external">
+SUBSTITUTION METHOD FOR SOLVING ANY RECURRENCE IN HINDI | part 2
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=F4EEVa8ddsA&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=44&amp;pp=iAQB" class="external">
+SUBSTITUTION METHOD FOR SOLVING ANY RECURRENCE IN HINDI | part 3
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=Hvwvqp7Dbbg&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=45&amp;pp=iAQB" class="external">
+SUBSTITUTION METHOD FOR SOLVING ANY RECURRENCE IN HINDI | part 4
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=4HddBs_19g8&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=46&amp;pp=iAQB" class="external">
+SUBSTITUTION METHOD FOR SOLVING ANY RECURRENCE IN HINDI | part 5
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=ynInZhQvjf8&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=47&amp;pp=iAQB" class="external">
+TREE  METHOD FOR SOLVING ANY RECURRENCE IN HINDI | part 1
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=wQEVQgF9F_M&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=48&amp;pp=iAQB" class="external">
+TREE  METHOD FOR SOLVING ANY RECURRENCE IN HINDI | part 2
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=oo2XsFdHG7o&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=49&amp;pp=iAQB" class="external">
+TREE  METHOD FOR SOLVING ANY RECURRENCE IN HINDI | part 3
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=99IVLY4ubG8&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=50&amp;pp=iAQB" class="external">
+TREE  METHOD FOR SOLVING ANY RECURRENCE IN HINDI | part 4
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=UUlOqP3CZAA&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=51&amp;pp=iAQB" class="external">
+TREE  METHOD FOR SOLVING ANY RECURRENCE IN HINDI | part 5
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=ZEX3PjnsY8I&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=52&amp;pp=iAQB" class="external">
+TREE  METHOD FOR SOLVING ANY RECURRENCE IN HINDI | part 6
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=lig-mro88Fc&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=53&amp;pp=iAQB" class="external">
+Master Theorem with Proof part 1
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=BAEBK_ggspA&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=54&amp;pp=iAQB" class="external">
+Master Theorem with Proof part 2
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=6S3eo6n4rpw&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=55&amp;pp=iAQB" class="external">
+Master Theorem with Proof part 3
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=x1XN31sOG_M&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=56&amp;pp=iAQB" class="external">
+Master Theorem with Proof part 4
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=kNOJThh5ct8&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=57&amp;pp=iAQB" class="external">
+Master Theorem with Proof part 5
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=PH1X861lv4M&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=58&amp;pp=iAQB" class="external">
+Practice Questions on Master Theorem Part 1
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=GjUdrgoZgrQ&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=59&amp;pp=iAQB" class="external">
+Practice Questions on Master Theorem Part 2
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=NBRtmgcx_Og&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=60&amp;pp=iAQB" class="external">
+Practice Questions on Master Theorem Part 3
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=rVBNPHsnzxA&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=61&amp;pp=iAQB" class="external">
+Practice Questions on Master Theorem Part 4
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=fzfQM1ioTA8&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=62&amp;pp=iAQB" class="external">
+Advanced Master Theorem | Extended Master Theorem with intuitive proof
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=vM1J_1_CMSY&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=63&amp;pp=iAQB" class="external">
+Linear Search part 1
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=IfB7Ea8rcic&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=64&amp;pp=iAQB" class="external">
+Linear Search part 2
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=sP9zfRCmi6E&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=65&amp;pp=iAQB" class="external">
+Linear Search part 3
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=drChnSfVfiY&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=66&amp;pp=iAQB" class="external">
+Binary Search part 1
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=VwhabYjyDh8&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=67&amp;pp=iAQB" class="external">
+Binary Search part 2
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=tlW58dk6gCA&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=68&amp;pp=iAQB" class="external">
+Binary Search part 3 (Modified Binary Search)
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=jAHCQwzdzc0&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=69&amp;pp=iAQB" class="external">
+Binary Search part 4 (Average case exact number of comparisons)
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=Vs73nVsHR3c&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=70&amp;pp=iAQB" class="external">
+Binary Search part 5 (Average case analysis of Binary search)
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=pquO3T1Prfg&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=71&amp;pp=iAQB" class="external">
+Binary Search part 6 (Practice Questions)
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=lGjSM1NdEBQ&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=72&amp;pp=iAQB" class="external">
+Binary Search part 7 (Practice Questions) <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=e-xV2ipTmJg&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=73&amp;pp=iAQB" class="external">
+Binary Search part 8 (Practice Questions) <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=9U0Uf3B9qjk&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=74&amp;pp=iAQB" class="external">
+Binary Search part 9 (Practice Questions) <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=09oiA43xHfQ&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=75&amp;pp=iAQB" class="external">
+Binary Search part 10 (Practice Questions) <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=9QfM-v3rH9g&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=76&amp;pp=iAQB" class="external">
+Selection Sort | Time Complexity(Best, Avg &amp; Worst) Analysis <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=D2rSrZ-Prfg&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=77&amp;pp=iAQB" class="external">
+Selection Sort | Stable or Not | In Place or Not | Practice Questions <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=ZjubwybPI8k&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=78&amp;pp=iAQB" class="external">
+Bubble Sort Part 1 | Performance of Bubble Sort | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=PnWYdCt9vVs&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=79&amp;pp=iAQB" class="external">
+Bubble Sort Part 2 | Performance of Bubble Sort | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=kn4Q3jF15J8&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=80&amp;pp=iAQB" class="external">
+Insertion Sort | Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=J1DYqlJxmNY&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=81&amp;pp=iAQB" class="external">
+Insertion Sort (part 2)| Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=Q0mPySpeFHU&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=82&amp;pp=iAQB" class="external">
+Counting Sort (part 1)| Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=GhOTtDY2crc&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=83&amp;pp=iAQB" class="external">
+Counting Sort (part 2)| Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=XyY4fyhxHw4&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=84&amp;pp=iAQB" class="external">
+Radix Sort (part 1)| Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=CmuZGt-qams&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=85&amp;pp=iAQB" class="external">
+Radix Sort (part 2)| Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=SeMj4wUGNpk&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=86&amp;pp=iAQB" class="external">
+Insertion Sort (part 3)| Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=x6Qh6dLFCko&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=87&amp;pp=iAQB" class="external">
+Heap Sort (part 1)| Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=e8WwpBHcnMw&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=88&amp;pp=iAQB" class="external">
+Heap Sort (part 2)| Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=sbrRq5hpUac&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=89&amp;pp=iAQB" class="external">
+Heap Sort (part 3)| Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=S1cBkkM1hIE&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=90&amp;pp=iAQB" class="external">
+Heap Sort (part 4)| Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=TfKRwhZaEmg&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=91&amp;pp=iAQB" class="external">
+Heap Sort (part 5)| Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=bCKhlSJXNzY&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=92&amp;pp=iAQB" class="external">
+Heap Sort (part 6)| Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=xuI3ulyGbec&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=93&amp;pp=iAQB" class="external">
+Heap Sort (part 7)| Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=IHcrGWtbIs0&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=94&amp;pp=iAQB" class="external">
+Heap Sort (part 8)| Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=My9gKAfnKU4&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=95&amp;pp=iAQB" class="external">
+Heap Sort (part 9)| Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=KN06kRHcWiA&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=96&amp;pp=iAQB" class="external">
+Heap Sort (part 10)| Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=GSozQtjvb2E&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=97&amp;pp=iAQB" class="external">
+Heap Sort (part 11)| Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=g7i3s3Q2lCk&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=98&amp;pp=iAQB" class="external">
+Heap Sort (part 12) Time Complexity Analysis | Algorithm <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/PROGRAMMING" class="tag-link internal alias" data-slug="tags/PROGRAMMING">PROGRAMMING</a> <a href=".././tags/PLACEMENTS" class="tag-link internal alias" data-slug="tags/PLACEMENTS">PLACEMENTS</a>
+
+<a href="https://www.youtube.com/watch?v=jM8L5H3TrU4&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=99&amp;pp=iAQB" class="external">
+ARRAY IN DATA STRUCTURES PART 1
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=iyMQZbua0BM&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=100&amp;pp=iAQB" class="external">
+ARRAY IN DATA STRUCTURES PART 2
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=QCGaFi6hYbA&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=101&amp;pp=iAQB" class="external">
+ARRAY IN DATA STRUCTURES PART 3
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=vKdwMN06d1k&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=102&amp;pp=iAQB" class="external">
+ARRAY IN DATA STRUCTURES PART 4
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=Qls-TMiTqn0&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=103&amp;pp=iAQB" class="external">
+Introduction to Linked List Part 1
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=hORalmchMxw&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=104&amp;pp=iAQB" class="external">
+Introduction to Linked List Part 2
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=lA2F1bhVTLE&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=105&amp;pp=iAQB" class="external">
+Introduction to Linked List Part 3
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=08XQcqstJa0&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=106&amp;pp=iAQB" class="external">
+Introduction to Linked List Part 4
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=3VN5uQr_qIY&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=107&amp;pp=iAQB" class="external">
+Introduction to Linked List Part 5
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=bE8_9V17dQk&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=108&amp;pp=iAQB" class="external">
+Introduction to Linked List Part 6
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=7s8epLhbiUU&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=109&amp;pp=iAQB" class="external">
+Introduction to Linked List Part 7
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=IIDXeXj07mw&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=110&amp;pp=iAQB" class="external">
+Introduction to Linked List Part 8
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=GydCiGHyi5k&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=111&amp;pp=iAQB" class="external">
+Introduction to Linked List Part 9
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=-0Z9Xa58WOQ&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=112&amp;pp=iAQB" class="external">
+Introduction to Linked List Part 10
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=sKIpVfgeXs4&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=113&amp;pp=iAQB" class="external">
+Introduction to Linked List Part 11
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=8u7abEMr7m0&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=114&amp;pp=iAQB" class="external">
+Introduction to Linked List Part 12
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=mzhUuzzFcyg&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=115&amp;pp=iAQB" class="external">
+Introduction to Linked List Part 13
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=1qKGaQNhuGE&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=116&amp;pp=iAQB" class="external">
+Introduction to Linked List Part 14
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=fgNE-a75NbE&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=117&amp;pp=iAQB" class="external">
+Tree in Data Structure (Part 1)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=dtwk-jvHBTs&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=118&amp;pp=iAQB" class="external">
+Tree in Data Structure (Part 2)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=ojyPUKfse0k&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=119&amp;pp=iAQB" class="external">
+Tree in Data Structure (Part 3)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=-5IJxPbZ4Oc&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=120&amp;pp=iAQB" class="external">
+Tree in Data Structure (Part 4)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=q05L0h1b3-o&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=121&amp;pp=iAQB" class="external">
+Tree in Data Structure (Part 5)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=ndAKAf2kXfc&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=122&amp;pp=iAQB" class="external">
+Tree in Data Structure (Part 6)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=XocO86JXbvo&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=123&amp;pp=iAQB" class="external">
+Binary Search Tree in Data Structure (Part 1)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=47T-ZQdYFnM&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=124&amp;pp=iAQB" class="external">
+Binary Search Tree in Data Structure (Part 2)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=rauGmKs-DyM&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=125&amp;pp=iAQB" class="external">
+Binary Search Tree in Data Structure (Part 3)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=7DLse0YZvfY&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=126&amp;pp=iAQB" class="external">
+Binary Search Tree in Data Structure (Part 4)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=-VzRduWYATg&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=127&amp;pp=iAQB" class="external">
+Binary Search Tree in Data Structure (Part 5)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=CutqM5lHxMQ&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=128&amp;pp=iAQB" class="external">
+Tree Traversal in Data Structure (Part 1)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=g0dAEwFko8Y&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=129&amp;pp=iAQB" class="external">
+Tree Traversal in Data Structure (Part 2)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=rqyT_iPyQig&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=130&amp;pp=iAQB" class="external">
+Tree Traversal in Data Structure (Part 3)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=rOKjj29M8kg&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=131&amp;pp=iAQB" class="external">
+Tree Traversal in Data Structure (Part 4)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=d_bwUH8BUZw&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=132&amp;pp=iAQB" class="external">
+Tree Traversal in Data Structure (Part 5)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=QpU2JagsrWI&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=133&amp;pp=iAQB" class="external">
+GATE 2014 question on IN Order traversal | Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=thnW-nfQIT8&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=134&amp;pp=iAQB" class="external">
+GATE 2014 question on Leftmost child Right Sibling| Introduction to Trees| Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=FZTRDkChmlg&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=135&amp;pp=iAQB" class="external">
+Counting Trees in Data Structure (Part 1)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=SZJIOilR2Rk&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=136&amp;pp=iAQB" class="external">
+Counting Trees in Data Structure (Part 2)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=g7-GxnHQW7M&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=137&amp;pp=iAQB" class="external">
+Most important PYQ of TREE | Tree in Data Structure|Introduction to Trees| Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=Xei0u5XlSNo&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=138&amp;pp=iAQB" class="external">
+AVL Trees in Data Structure (Part 1)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=5Bz2TMKRFng&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=139&amp;pp=iAQB" class="external">
+AVL Trees in Data Structure (Part 2)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=7D9vbeVE3Ls&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=140&amp;pp=iAQB" class="external">
+AVL Trees in Data Structure (Part 3)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=lQYKIAfwsjY&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=141&amp;pp=iAQB" class="external">
+AVL Trees in Data Structure (Part 4)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=4MnMafeDzxE&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=142&amp;pp=iAQB" class="external">
+AVL Trees in Data Structure (Part 5)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=g5m1AKCUvPE&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=143&amp;pp=iAQB" class="external">
+AVL Trees in Data Structure (Part 6)| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=fPhBRgsooD0&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=144&amp;pp=iAQB" class="external">
+GATE 2014 question on Sub Trees | Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=Qn5QfqKPzeE&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=145&amp;pp=iAQB" class="external">
+Expression Trees in Data Structure| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=nq_xjJwMcFE&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=146&amp;pp=iAQB" class="external">
+Various representation of Trees| Introduction to Trees | Data Structures Tutorials
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=qKkIw8I-ED4&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=147&amp;pp=iAQB" class="external">
+Graph Representation in Data Structure |Adjacency Matrix and Adjacency List(part 1)
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=IzbdTuWa3WE&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=148&amp;pp=iAQB" class="external">
+Graph Representation in Data Structure |Adjacency Matrix and Adjacency List(part 2) | Universal Sink
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=Lh6Xx852PlQ&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=149&amp;pp=iAQB" class="external">
+BFS &amp; DFS | Breadth First Search | Depth First Search | Graph Traversing | DAA | Part 1
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=Z7UzQooU8-Q&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=150&amp;pp=iAQB" class="external">
+BFS &amp; DFS | Breadth First Search | Depth First Search | Graph Traversing | DAA | Part 2
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=kk9jMmq-5eQ&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=151&amp;pp=iAQB" class="external">
+BFS &amp; DFS | Breadth First Search | Depth First Search | Graph Traversing | DAA | Part 3
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=q1wZnfQsEM8&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=152&amp;pp=iAQB" class="external">
+BFS &amp; DFS | Breadth First Search | Depth First Search | Graph Traversing | DAA | Part 4
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=R-SrqWnJV4k&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=153&amp;pp=iAQB" class="external">
+BFS &amp; DFS | Breadth First Search | Depth First Search | Graph Traversing | DAA | Part 5
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=WJKlTA9dPsY&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=154&amp;pp=iAQB" class="external">
+BFS &amp; DFS | Breadth First Search | Depth First Search | Graph Traversing | DAA | Part 6
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=xw_10Xq5yaQ&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=155&amp;pp=iAQB" class="external">
+BFS &amp; DFS | Breadth First Search | Depth First Search (Iterative)| Graph Traversing | DAA | Part 7
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=PNggn3mcePg&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=156&amp;pp=iAQB" class="external">
+BFS &amp; DFS | Breadth First Search | Depth First Search (Iterative)| Graph Traversing | DAA | Part 8
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=U4EMfps0Luw&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=157&amp;pp=iAQB" class="external">
+BFS &amp; DFS | Breadth First Search | Depth First Search (Iterative)| Graph Traversing | DAA | Part 9
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=UJxuEQPlCvI&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=158&amp;pp=iAQB" class="external">
+BFS &amp; DFS | Breadth First Search | Depth First Search Discover time and Finish Time | DAA | Part 10
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=X9a-3Evx2PM&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=159&amp;pp=iAQB" class="external">
+BFS &amp; DFS | Breadth First Search | Depth First Search Types of Edges | DAA | Part 11
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=zSylwKzw0eA&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=160&amp;pp=iAQB" class="external">
+BFS &amp; DFS | Breadth First Search | Depth First Search Types of Edges | DAA | Part 12
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=ReDdPHnq2ns&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=161&amp;pp=iAQB" class="external">
+BFS &amp; DFS | Breadth First Search | Breadth First Search Types of Edges | DAA | Part 13
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=aWfQ_ZOb2wA&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=162&amp;pp=iAQB" class="external">
+Parameter Passing Techniques | Call by value | Call by Reference | Part 1
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=wT3hH8wCyd0&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=163&amp;pp=iAQB" class="external">
+Parameter Passing Techniques | Call by value | Call by Reference | Part 2
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=XRZsUIH4oh0&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=164&amp;pp=iAQB" class="external">
+Introduction To Stacks part 1 | GATE 2025
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=KZlL2HINdrY&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=165&amp;pp=iAQB" class="external">
+Introduction To Stacks part 2 | GATE 2025
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=Xiwix79cS64&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=166&amp;pp=iAQB" class="external">
+Introduction To Stacks part 3 | GATE 2025
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=LwP9UezZOUk&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=167&amp;pp=iAQB" class="external">
+Introduction To Stacks part 4 | GATE 2025
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=EN7nsdx_CtU&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=168&amp;pp=iAQB" class="external">
+Introduction To Stacks part 5 | PYQs on Stack | GATE 2025
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=hpuuQqve5W8&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=169&amp;pp=iAQB" class="external">
+Introduction To Stacks part 6 |  Implementing Stack Using LLst| GATE 2025
+<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="https://www.youtube.com/watch?v=T6sex8GSR2c&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=170&amp;pp=iAQB" class="external">
+Introduction to Queue Data structure | Part 1| Data Structure <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/queue" class="tag-link internal alias" data-slug="tags/queue">queue</a> | GATE 2025
+
+<a href="https://www.youtube.com/watch?v=0Zi5WebYdnU&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=171&amp;pp=iAQB" class="external">
+Introduction to Queue Data structure | Part 2| Data Structure <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/queue" class="tag-link internal alias" data-slug="tags/queue">queue</a> | GATE 2025
+
+<a href="https://www.youtube.com/watch?v=Gm3_yfNTg0w&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=172&amp;pp=iAQB" class="external">
+Introduction to Queue Data structure | Part 3| Data Structure <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/queue" class="tag-link internal alias" data-slug="tags/queue">queue</a> | GATE 2025
+
+<a href="https://www.youtube.com/watch?v=rQgnRiVycHw&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=173&amp;pp=iAQB" class="external">
+Introduction to Queue Data structure | Part 4| Data Structure <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/queue" class="tag-link internal alias" data-slug="tags/queue">queue</a> | GATE 2025
+
+<a href="https://www.youtube.com/watch?v=WaDjNnjSbkA&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=174&amp;pp=iAQB" class="external">
+Introduction to Queue Data structure | Part 5| Data Structure <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/queue" class="tag-link internal alias" data-slug="tags/queue">queue</a> | GATE 2025
+
+<a href="https://www.youtube.com/watch?v=VssLfF5sKOs&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=175&amp;pp=iAQB" class="external">
+Introduction to Queue Data structure | Part 6| Data Structure <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/queue" class="tag-link internal alias" data-slug="tags/queue">queue</a> | GATE 2025
+
+<a href="https://www.youtube.com/watch?v=C2qlhjpmqac&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=176&amp;pp=iAQB" class="external">
+Introduction to Queue Data structure | Part 7| Data Structure <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/queue" class="tag-link internal alias" data-slug="tags/queue">queue</a> | GATE 2025
+
+<a href="https://www.youtube.com/watch?v=oNE7Ia2Q1x4&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=177&amp;pp=iAQB" class="external">
+Introduction to Queue Data structure | Part 8 | Data Structure <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/queue" class="tag-link internal alias" data-slug="tags/queue">queue</a> | GATE 2006 question
+
+<a href="https://www.youtube.com/watch?v=RoSQ_UvuVlk&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=178&amp;pp=iAQB" class="external">
+Introduction to Queue Data structure | Part 9 | Data Structure <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/queue" class="tag-link internal alias" data-slug="tags/queue">queue</a> | GATE 2022 question
+
+<a href="https://www.youtube.com/watch?v=nVCTmKkLNDA&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=179&amp;pp=iAQB" class="external">
+Introduction to Queue Data structure | Part 10 | Data Structure <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/queue" class="tag-link internal alias" data-slug="tags/queue">queue</a> | GATE 2025
+
+<a href="https://www.youtube.com/watch?v=RxViErbNKAQ&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=180&amp;pp=iAQB" class="external">
+Introduction to Queue Data structure | Part 11 | Data Structure <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/queue" class="tag-link internal alias" data-slug="tags/queue">queue</a> | GATE 2025
+
+<a href="https://www.youtube.com/watch?v=GmkeuL0TBto&amp;list=PLC36xJgs4dxFCQVvjMrrjcY3XrcMm2GHy&amp;index=181&amp;pp=iAQB" class="external">
+Introduction to Queue Data structure | Part 12 | Data Structure <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href=".././tags/queue" class="tag-link internal alias" data-slug="tags/queue">queue</a> | GATE 2025
+</p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="../postscript.js" type="module" data-persist="true"></script></html>
