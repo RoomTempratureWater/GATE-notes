@@ -3,11 +3,10 @@ import json
 json_path = r'd:\GATE2027\GATE-notes\questions-filtered.json'
 target_file_path = r'd:\GATE2027\GATE-notes\DM\short\Graph_Theory_Connectivity_Short.md'
 
+
 keywords = [
-    "connected", "disconnected", "component", 
-    "cut vertex", "articulation point", 
-    "cut edge", "bridge", 
-    "edge connectivity", "vertex connectivity"
+    "adjacency matrix", "eigen value", "eigen vector", "spectrum", 
+    "characteristic equation", "linear algebra"
 ]
 
 try:
@@ -37,21 +36,19 @@ try:
     print(f"Found {len(matches)} relevant questions.")
 
     if matches:
-        markdown_content = "\n\n---\n## Relevant PYQs (Connectivity)\n"
+        markdown_content = "\n\n---\n## Relevant PYQs\n"
         
-        # Select top 5 relevant ones to avoid clutter
+        # Select top 5 relevant ones
         for q in matches[:5]:
             markdown_content += f"\n### {q['title']}\n"
             markdown_content += f"[Discussion Link]({q['link']})\n\n"
             markdown_content += f"{q['question']}\n"
             markdown_content += "\n---\n"
 
-        with open(target_file_path, 'a', encoding='utf-8') as f:
-            f.write(markdown_content)
-            
-        print("Appended questions to short notes.")
+        print(markdown_content)
     else:
         print("No matches found.")
 
 except Exception as e:
     print(f"Error: {e}")
+
