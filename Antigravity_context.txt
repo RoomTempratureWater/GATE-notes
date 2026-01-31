@@ -19,9 +19,12 @@ tracker.md will have
 topic | subtopic | date | long note link | short note link | yt link |
 
 in short and long notes you can add reference questions from the questions-filtered.json file.
-you can use the .py files you created to get the questions from the json
+you can use the .py (find_questions.py for ex) files you created to get the questions from the json
 
 
 add diagrams to short and long notes wherever required and enrich the notes
 
 everytime i ask you to do this, you should create a new LONG note, but SHORT note you need to use your discretion, if you think the content is different and needs a new note, then make a new note else append to the existing one related to the topic/subtopic
+
+add relevant obsidian tags to the notes created as well.
+add links to other notes as well, use tracker.md to find relevant notes to link to.
