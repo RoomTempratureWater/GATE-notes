@@ -5,8 +5,9 @@ target_file_path = r'd:\GATE2027\GATE-notes\DM\short\Graph_Theory_Connectivity_S
 
 
 keywords = [
-    "adjacency matrix", "eigen value", "eigen vector", "spectrum", 
-    "characteristic equation", "linear algebra"
+    "propositional logic", "tautology", "satisfiable", "inference rule", 
+    "implication", "conjunction", "disjunction", "predicate", "valid", 
+    "contradiction", "equivalence", "argument"
 ]
 
 try:
