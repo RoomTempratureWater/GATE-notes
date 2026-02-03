@@ -5,3 +5,4 @@
 | DM | Special Types of Graphs | 29/01/2026 | [[DM/long/Graph_Theory_Basics.md]] | [[DM/short/Graph_Theory_Basics_Short.md]] | [Lecture](https://www.youtube.com/watch?v=QzSIcVt6-ko&list=PL3eEXnCBViH9TTRzwOcwbXtUVK8-NHZrJ&index=14) |
 | DM | Graph Theory - Adjacency Matrix | 31/01/2026 | [[DM/long/Graph_Theory_Adjacency_Matrix.md]] | [[DM/short/Graph_Theory_Adjacency_Matrix_Short.md]] | [Lecture](https://www.youtube.com/watch?v=RHdD1f6VKzg&list=PL3eEXnCBViH9TTRzwOcwbXtUVK8-NHZrJ&index=12) |
 | DM | Graph Theory - Planarity | 02/02/2026 | [[DM/long/Graph_Theory_Planarity.md]] | [[DM/short/Graph_Theory_Planarity_Short.md]] | [Lecture](https://www.youtube.com/watch?v=nYq8Dd_ncAQ) |
+| DM | Propositional Logic | 03/02/2026 | [[DM/Propositional_Logic/long/Propositional_Logic.md]] | [[DM/Propositional_Logic/short/Propositional_Logic_Short.md]] | [Lecture](https://www.youtube.com/watch?v=1txRUu-TwsI&list=PL3eEXnCBViH9TTRzwOcwbXtUVK8-NHZrJ&index=10) |
