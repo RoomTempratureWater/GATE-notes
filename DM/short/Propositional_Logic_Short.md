@@ -45,7 +45,7 @@ Premise ko **True** maano, aur check karo ki Conclusion bhi **True** aa raha hai
 
 ## Important Rules
 
-![Logic Rules](../../Photos/Pasted%20image%2020260203_propositional_logic.png)
+![[Photos/Pasted image 20260203_propositional_logic.png]]
 
 1.  **Modus Ponens**: $a \to b$ aur $a$ diya hai -> toh $b$ true hoga.
 2.  **Modus Tollens**: $a \to b$ aur $\neg b$ diya hai -> toh $\neg a$ true hoga.
