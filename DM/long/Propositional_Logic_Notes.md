@@ -151,7 +151,7 @@ If we know that at least one of $L$ or $R$ is true ($L \lor R$), and we find out
 ### Standard Logical Identities and Inference Rules
 *(Refer to the image below for visual derivations)*
 
-![Logic Rules](../../Photos/Pasted%20image%2020260203_propositional_logic.png)
+![[Photos/Pasted image 20260203_propositional_logic.png]]
 
 Some key rules derivation shown in the image (recreated below):
 
