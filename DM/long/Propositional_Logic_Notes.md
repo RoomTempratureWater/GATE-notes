@@ -1,4 +1,4 @@
-#gate/dm/long/propositional_logic
+#gate #dm #long #logic #propositional_logic
 
 # Propositional Logic
 

@@ -1,0 +1,84 @@
+#gate
+
+# subjects
+#dm
+#toc
+#cn
+#dbms
+#os
+#dsa
+#cd
+
+# sections
+#long
+#short
+
+# Discrete Mathematics
+#logic
+#propositional_logic
+#predicate_logic
+#sets
+#relations
+#equivalence_relation
+#graphs
+#trees
+#connectivity
+#combinatorics
+
+# Theory of Computation
+#automata
+#dfa
+#nfa
+#pda
+#grammar
+#cfg
+#turing_machine
+#decidability
+
+# Computer Networks
+#osi
+#osi_layers
+#tcp
+#tcp_congestion
+#routing
+#link_state
+#distance_vector
+
+# DBMS
+#er_model
+#relational_model
+#normalization
+#bcnf
+#indexing
+#b_tree
+#transactions
+#sql
+#joins
+
+# Operating Systems
+#processes
+#scheduling
+#round_robin
+#memory
+#paging
+#deadlocks
+
+# Data Structures and Algorithms
+#arrays
+#linked_list
+#stacks
+#queues
+#trees
+#bst
+#graphs
+#bfs
+#dfs
+#dp
+
+# Compiler Design
+#lexical
+#tokens
+#syntax
+#parsing
+#ll1
+#optimization

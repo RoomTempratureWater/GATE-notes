@@ -1,4 +1,4 @@
-#gate/dm/short/graphs/basics
+#gate #dm #short #graphs
 
 # Graph Theory - Basics Summary (Hinglish)
 

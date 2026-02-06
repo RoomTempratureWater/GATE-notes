@@ -1,4 +1,4 @@
-#gate/dm/short/first_order_logic
+#gate #dm #short #logic #predicate_logic
 
 # Predicate Logic (Revision)
 

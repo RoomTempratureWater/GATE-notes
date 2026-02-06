@@ -1,4 +1,4 @@
-#gate/dm/short/graphs/adjacency_matrix
+#gate #dm #short #graphs
 
 # Adjacency Matrix (Short Notes)
 
@@ -49,4 +49,4 @@ Think of Matrix as a machine.
 - **GATE IT 2005**: Matrix properties vs Connectivity.
 - **GATE CSE 2022**: Connected components and Eigenvalues.
 
-#gate2027 #graph-theory #adjacency-matrix #maths #linear-algebra
+

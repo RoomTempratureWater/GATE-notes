@@ -1,4 +1,4 @@
-#gate/dm/long/graphs/basics
+#gate #dm #long #graphs
 
 # Graph Theory Basics
 

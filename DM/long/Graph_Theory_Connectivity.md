@@ -1,4 +1,4 @@
-#gate/dm/long/graphs/connectivity
+#gate #dm #long #graphs #connectivity
 
 # Graph Theory - Connectivity
 

@@ -1,4 +1,4 @@
-#gate/dm/short/propositional_logic
+#gate #dm #short #logic #propositional_logic
 
 # Propositional Logic (Short Notes)
 

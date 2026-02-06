@@ -1,4 +1,4 @@
-#gate/dm/long/graphs/planarity
+#gate #dm #long #graphs
 
 # Planarity
 
