@@ -1,3 +1,5 @@
+#gate/dm/short/graphs/planarity
+
 # Planarity (Short Notes)
 
 ## Basic Concepts

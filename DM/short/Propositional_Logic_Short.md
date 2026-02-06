@@ -1,3 +1,5 @@
+#gate/dm/short/propositional_logic
+
 # Propositional Logic (Short Notes)
 
 **Date:** 03/02/2026

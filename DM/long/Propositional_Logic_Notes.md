@@ -1,3 +1,5 @@
+#gate/dm/long/propositional_logic
+
 # Propositional Logic
 
 **Date:** 03/02/2026

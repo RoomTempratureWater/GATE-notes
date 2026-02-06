@@ -1,3 +1,5 @@
+#gate/dm/long/graphs/adjacency_matrix
+
 # Adjacency Matrix
 
 ## Definition

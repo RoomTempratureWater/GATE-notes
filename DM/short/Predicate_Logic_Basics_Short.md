@@ -1,3 +1,5 @@
+#gate/dm/short/first_order_logic
+
 # Predicate Logic (Revision)
 
 **Topic**: DM
