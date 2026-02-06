@@ -1,3 +1,5 @@
+#gate/dm/short/graphs/basics
+
 # Graph Theory - Basics Summary (Hinglish)
 
 **Date:** 27/01/2026

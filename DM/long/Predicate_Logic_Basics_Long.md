@@ -1,7 +1,7 @@
 # Predicate Logic Basics
 
 **Date**: 06/02/2026
-**Tags**: #GATE #DM #Logic #PredicateLogic
+#gate/dm/long/first_order_logic
 **YouTube Link**: [Lecture 9](https://www.youtube.com/watch?v=YQnAXv1UImg&list=PL3eEXnCBViH9TTRzwOcwbXtUVK8-NHZrJ&index=9)
 
 ---

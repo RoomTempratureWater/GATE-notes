@@ -1,3 +1,5 @@
+#gate/dm/short/graphs/adjacency_matrix
+
 # Adjacency Matrix (Short Notes)
 
 **Link to Long Notes:** [[Graph_Theory_Adjacency_Matrix]]

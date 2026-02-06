@@ -1,3 +1,5 @@
+#gate/dm/short/graphs/connectivity
+
 # Graph Theory - Connectivity (Short Notes)
 
 **Date:** 29/01/2026
