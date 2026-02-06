@@ -20,7 +20,10 @@ topic | subtopic | date | long note link | short note link | yt link |
 
 in short and long notes you can add reference questions from the questions-filtered.json file.
 you can use the .py (find_questions.py, filter_questions_refined.py for ex) files you created to get the questions from the json
+note: try to use existing python files to fetch the questions instead of creating python scripts yourself
 
+basic folders for topics are created (ex DM, TOC etc) when you create a short and long note, create it in topic/long and topic/short
+and name it as {subtopic}_{any_identifier_name}.md
 
 add diagrams to short and long notes wherever required and enrich the notes
 
@@ -30,3 +33,4 @@ add relevant obsidian tags to the notes created as well.
 add links to other notes as well, use tracker.md to find relevant notes to link to.
 
 make sure to git pull latest changes and create a new branch before making any changes.
+push branch to remote after changes.
