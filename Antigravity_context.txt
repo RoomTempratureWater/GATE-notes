@@ -24,12 +24,88 @@ note: try to use existing python files to fetch the questions instead of creatin
 
 basic folders for topics are created (ex DM, TOC etc) when you create a short and long note, create it in topic/long and topic/short
 and name it as {subtopic}_{any_identifier_name}.md
+`DM/
+├── long/
+│   ├── note1.md
+│   ├── note2.md
+│   ├── note3.md
+│
+├── short/
+│   ├── note1.md
+│   ├── note2.md
+│   └── formula.md
+
+TOC/
+├── long/
+│   ├── note1.md
+│   ├── note2.md
+│   ├── note3.md
+│
+├── short/
+│   ├── note1.md
+│   ├── note2.md
+│   └── cheat.md
+
+CN/
+├── long/
+│   ├── note1.md
+│   ├── note2.md
+│   ├── note3.md
+│
+├── short/
+│   ├── note1.md
+│   ├── note2.md
+│   └── cheat.md
+
+DBMS/
+├── long/
+│   ├── note1.md
+│   ├── note2.md
+│   ├── note3.md
+│
+├── short/
+│   ├── note1.md
+│   ├── note2.md
+│   └── sql.md
+
+OS/
+├── long/
+│   ├── note1.md
+│   ├── note2.md
+│   ├── note3.md
+│
+├── short/
+│   ├── note1.md
+│   ├── note2.md
+│   └── cheat.md
+
+DSA/
+├── long/
+│   ├── note1.md
+│   ├── note2.md
+│   ├── note3.md
+│
+├── short/
+│   ├── note1.md
+│   ├── note2.md
+│   └── formulas.md
+
+CD/
+├── long/
+│   ├── note1.md
+│   ├── note2.md
+│   ├── note3.md
+│
+├── short/
+│   ├── note1.md
+│   ├── note2.md
+│   └── cheat.md` like this
 
 add diagrams to short and long notes wherever required and enrich the notes
 
 everytime i ask you to do this, you should create a new LONG note, but SHORT note you need to use your discretion, if you think the content is different and needs a new note, then make a new note else append to the existing one related to the topic/subtopic
 
-add relevant obsidian tags to the notes created as well.
+for tagging each note, use tags.txt file and ONLY use tags from there for each note.
 add links to other notes as well, use tracker.md to find relevant notes to link to.
 
 make sure to git pull latest changes and create a new branch before making any changes.

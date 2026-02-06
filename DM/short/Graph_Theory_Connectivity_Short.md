@@ -1,4 +1,4 @@
-#gate/dm/short/graphs/connectivity
+#gate #dm #short #graphs #connectivity
 
 # Graph Theory - Connectivity (Short Notes)
 

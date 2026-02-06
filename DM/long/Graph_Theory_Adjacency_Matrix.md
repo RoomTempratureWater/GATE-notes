@@ -1,4 +1,4 @@
-#gate/dm/long/graphs/adjacency_matrix
+#gate #dm #long #graphs
 
 # Adjacency Matrix
 
