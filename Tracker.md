@@ -8,3 +8,4 @@
 | DM | Propositional Logic | 03/02/2026 | [[DM/long/Propositional_Logic_Notes.md]] | [[DM/short/Propositional_Logic_Short.md]] | [Lecture](https://www.youtube.com/watch?v=1txRUu-TwsI&list=PL3eEXnCBViH9TTRzwOcwbXtUVK8-NHZrJ&index=10) |
 | DM | Predicate Logic | 06/02/2026 | [[DM/long/Predicate_Logic_Basics_Long.md]] | [[DM/short/Predicate_Logic_Basics_Short.md]] | [Lecture](https://www.youtube.com/watch?v=YQnAXv1UImg&list=PL3eEXnCBViH9TTRzwOcwbXtUVK8-NHZrJ&index=9) |
 | DM | Quantifiers & Nested Logic | 10/02/2026 | [[DM/long/Quantifiers_Logic.md]] | [[DM/short/Quantifiers_Logic.md]] | [Lecture](https://www.youtube.com/watch?v=kA4Xpn_dse0&list=PL3eEXnCBViH9TTRzwOcwbXtUVK8-NHZrJ&index=8) |
+| DM | Set Theory - Relations | 12/02/2026 | [[DM/long/Set_Theory_Relations.md]] | [[DM/short/Set_Theory_Relations_Short.md]] | [Lecture](https://www.youtube.com/watch?v=mTzP33BwTWg&list=PL3eEXnCBViH9TTRzwOcwbXtUVK8-NHZrJ&index=7) |
