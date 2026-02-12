@@ -9,7 +9,7 @@ tags:
 
 # Set Theory - Relations Basics
 
-[Short Notes](DM/short/Set_Theory_Relations_Short.md)
+[[DM/short/Set_Theory_Relations_Short.md|Short Notes]]
 
 ## Introduction
 

@@ -8,7 +8,7 @@ tags:
 
 # Set Theory - Relations (Short Notes)
 
-[Long Notes](DM/long/Set_Theory_Relations.md)
+[[DM/long/Set_Theory_Relations.md|Long Notes]]
 
 ## Basics
 
