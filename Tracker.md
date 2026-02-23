@@ -10,3 +10,4 @@
 | DM | Quantifiers & Nested Logic | 10/02/2026 | [[DM/long/Quantifiers_Logic.md]] | [[DM/short/Quantifiers_Logic.md]] | [Lecture](https://www.youtube.com/watch?v=kA4Xpn_dse0&list=PL3eEXnCBViH9TTRzwOcwbXtUVK8-NHZrJ&index=8) |
 | DM | Set Theory - Relations | 12/02/2026 | [[DM/long/Set_Theory_Relations.md]] | [[DM/short/Set_Theory_Relations_Short.md]] | [Lecture](https://www.youtube.com/watch?v=mTzP33BwTWg&list=PL3eEXnCBViH9TTRzwOcwbXtUVK8-NHZrJ&index=7) |
 | DM | Relations, Equivalence & Posets | 22/02/2026 | [[DM/long/Relations_Equivalence_Posets.md]] | [[DM/short/Relations_Equivalence_Posets_Short.md]] | [Lecture](https://www.youtube.com/watch?v=7jLASCFZnr0&list=PL3eEXnCBViH9TTRzwOcwbXtUVK8-NHZrJ&index=6) |
+| DM | Group Theory | 23/02/2026 | [[DM/long/Group_Theory_Long.md]] | [[DM/short/Group_Theory_Short.md]] | [Lecture](https://www.youtube.com/watch?v=s_c6m3818KU&list=PL3eEXnCBViH9TTRzwOcwbXtUVK8-NHZrJ&index=5) |
