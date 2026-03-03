@@ -7,7 +7,7 @@ try:
         data = json.load(f)
 
     # Keywords specific to Group Theory
-    high_priority_keywords = ["group theory", "semi group", "monoid", "abelian group", "algebraic structure"]
+    high_priority_keywords = ["subgroup", "cyclic group", "generator", "lagrange", "group theory", "semi group", "monoid", "abelian group", "algebraic structure"]
     
     selected_questions = []
 
