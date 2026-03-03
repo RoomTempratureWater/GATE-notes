@@ -6,9 +6,8 @@ try:
     with open(file_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    # Keywords specific to today's notes (Graph Theory Basics)
-    # High priority: degree sequence, Havel-Hakimi, Handshaking, counting edges/graphs
-    high_priority_keywords = ["degree sequence", "havel", "hakimi", "handshaking", "sum of degrees", "maximum number of edges", "simple graph"]
+    # Keywords specific to Group Theory
+    high_priority_keywords = ["group theory", "semi group", "monoid", "abelian group", "algebraic structure"]
     
     selected_questions = []
 
@@ -23,33 +22,33 @@ try:
                 score += 1
                 matches.append(kw)
         
-        # Also check for simple degree problems
-        if "degree" in q_text and "vertex" in q_text and "connected" not in q_text and score == 0:
-             # Potential basic degree question
-             if "sum" in q_text or "even" in q_text or "odd" in q_text:
-                 score += 0.5
-                 matches.append("degree_basic")
+        # Also check for specific phrases
+        if "identity element" in q_text or "inverse element" in q_text or "binary operation is associative" in q_text or "mathematical group" in q_text:
+             score += 0.5
+             matches.append("group_properties")
 
         if score > 0:
-            selected_questions.append({
-                'data': item,
-                'score': score,
-                'matches': matches
-            })
+            # exclude COA/architecture words just in case
+            if "cache" not in q_text and "associative mapping" not in q_text:
+                selected_questions.append({
+                    'data': item,
+                    'score': score,
+                    'matches': matches
+                })
 
     # Sort by score descending
     selected_questions.sort(key=lambda x: x['score'], reverse=True)
 
     print(f"Found {len(selected_questions)} highly relevant questions.")
     
-    # Print top 5 in detail
-    for i, sq in enumerate(selected_questions[:5]):
-        q = sq['data']
-        print(f"--- Question {i+1} ---")
-        print(f"**{q['title']}**")
-        print(f"Link: {q['link']}")
-        print(f"Content: {q['question']}")
-        print("\n")
+    # Print top 5 in detail to a file
+    with open('qt.md', 'w', encoding='utf-8') as out_f:
+        for i, sq in enumerate(selected_questions[:5]):
+            q = sq['data']
+            out_f.write(f"--- Question {i+1} ---\n")
+            out_f.write(f"**{q['title']}**\n")
+            out_f.write(f"Link: {q['link']}\n")
+            out_f.write(f"Content: {q['question']}\n\n")
 
 except Exception as e:
     print(f"Error: {e}")

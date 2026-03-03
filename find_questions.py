@@ -5,9 +5,8 @@ target_file_path = r'd:\GATE2027\GATE-notes\DM\short\Graph_Theory_Connectivity_S
 
 
 keywords = [
-    "propositional logic", "tautology", "satisfiable", "inference rule", 
-    "implication", "conjunction", "disjunction", "predicate", "valid", 
-    "contradiction", "equivalence", "argument"
+    "group theory", "semi group", "monoid", "abelian group", 
+    "associative", "commutative", "groupoid", "algebraic structure"
 ]
 
 try:
