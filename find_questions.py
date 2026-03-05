@@ -5,8 +5,7 @@ target_file_path = r'd:\GATE2027\GATE-notes\DM\short\Graph_Theory_Connectivity_S
 
 
 keywords = [
-    "group theory", "semi group", "monoid", "abelian group", 
-    "associative", "commutative", "groupoid", "algebraic structure"
+    "generating function", "generating functions", "power series"
 ]
 
 try:
