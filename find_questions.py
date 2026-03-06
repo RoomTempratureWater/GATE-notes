@@ -5,7 +5,7 @@ target_file_path = r'd:\GATE2027\GATE-notes\DM\short\Graph_Theory_Connectivity_S
 
 
 keywords = [
-    "generating function", "generating functions", "power series"
+    "recurrence relation", "recurrence", "recurring relation", "initial condition", "an = "
 ]
 
 try:
@@ -44,6 +44,10 @@ try:
             markdown_content += f"{q['question']}\n"
             markdown_content += "\n---\n"
 
+        with open(r'd:\GATE2027\GATE-notes\DM\long\Recurrence_Relations_Long.md', 'a', encoding='utf-8') as f:
+            f.write(markdown_content)
+        with open(r'd:\GATE2027\GATE-notes\DM\short\Recurrence_Relations_Short.md', 'a', encoding='utf-8') as f:
+            f.write(markdown_content)
         print(markdown_content)
     else:
         print("No matches found.")
