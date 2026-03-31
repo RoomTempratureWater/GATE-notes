@@ -1,11 +1,10 @@
 import json
 
 json_path = r'd:\GATE2027\GATE-notes\questions-filtered.json'
-target_file_path = r'd:\GATE2027\GATE-notes\DM\short\Graph_Theory_Connectivity_Short.md'
-
 
 keywords = [
-    "recurrence relation", "recurrence", "recurring relation", "initial condition", "an = "
+    "chomsky", "regular language", "finite automata", "context free grammar", 
+    "turing machine", "regular expression", "context sensitive", "unrestricted grammar", "push down automata"
 ]
 
 try:
@@ -26,11 +25,12 @@ try:
                 break
         
         if found:
-            matches.append(item)
+            # ensure no math/dm overlap if possible, but let's just group them by score
+            score = sum(1 for kw in keywords if kw in q_text)
+            matches.append({'data': item, 'score': score})
 
-    # Sort matching questions by year (newest first logic approx)
-    # Assuming title contains year like "GATE CSE 2023"
-    matches.sort(key=lambda x: x['title'], reverse=True)
+    # Sort matching questions by score, then by title
+    matches.sort(key=lambda x: (x['score'], x['data']['title']), reverse=True)
 
     print(f"Found {len(matches)} relevant questions.")
 
@@ -38,20 +38,20 @@ try:
         markdown_content = "\n\n---\n## Relevant PYQs\n"
         
         # Select top 5 relevant ones
-        for q in matches[:5]:
+        for m in matches[:5]:
+            q = m['data']
             markdown_content += f"\n### {q['title']}\n"
             markdown_content += f"[Discussion Link]({q['link']})\n\n"
             markdown_content += f"{q['question']}\n"
             markdown_content += "\n---\n"
 
-        with open(r'd:\GATE2027\GATE-notes\DM\long\Recurrence_Relations_Long.md', 'a', encoding='utf-8') as f:
+        with open(r'd:\GATE2027\GATE-notes\TOC\long\Basics_and_Chomsky_Hierarchy_Long.md', 'a', encoding='utf-8') as f:
             f.write(markdown_content)
-        with open(r'd:\GATE2027\GATE-notes\DM\short\Recurrence_Relations_Short.md', 'a', encoding='utf-8') as f:
+        with open(r'd:\GATE2027\GATE-notes\TOC\short\Basics_and_Chomsky_Hierarchy_Short.md', 'a', encoding='utf-8') as f:
             f.write(markdown_content)
-        print(markdown_content)
+        print("Written to both long and short notes successfully.")
     else:
         print("No matches found.")
 
 except Exception as e:
     print(f"Error: {e}")
-
