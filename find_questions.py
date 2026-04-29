@@ -3,8 +3,7 @@ import json
 json_path = r'd:\GATE2027\GATE-notes\questions-filtered.json'
 
 keywords = [
-    "chomsky", "regular language", "finite automata", "context free grammar", 
-    "turing machine", "regular expression", "context sensitive", "unrestricted grammar", "push down automata"
+    "regular expression"
 ]
 
 try:
@@ -45,9 +44,9 @@ try:
             markdown_content += f"{q['question']}\n"
             markdown_content += "\n---\n"
 
-        with open(r'd:\GATE2027\GATE-notes\TOC\long\Basics_and_Chomsky_Hierarchy_Long.md', 'a', encoding='utf-8') as f:
+        with open(r'd:\GATE2027\GATE-notes\TOC\long\Regular_Expressions_Long.md', 'a', encoding='utf-8') as f:
             f.write(markdown_content)
-        with open(r'd:\GATE2027\GATE-notes\TOC\short\Basics_and_Chomsky_Hierarchy_Short.md', 'a', encoding='utf-8') as f:
+        with open(r'd:\GATE2027\GATE-notes\TOC\short\Regular_Expressions_Short.md', 'a', encoding='utf-8') as f:
             f.write(markdown_content)
         print("Written to both long and short notes successfully.")
     else:

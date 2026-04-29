@@ -6,65 +6,65 @@
       <description>Last 10 notes on GATE Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Finite automata and regular langauges</title>
-    <link>https://gate2027.com/TOC/Finite-automata-and-regular-langauges</link>
-    <guid>https://gate2027.com/TOC/Finite-automata-and-regular-langauges</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 31 Mar 2026 20:18:02 GMT</pubDate>
-  </item><item>
-    <title>PDA and CFLs</title>
-    <link>https://gate2027.com/TOC/PDA-and-CFLs</link>
-    <guid>https://gate2027.com/TOC/PDA-and-CFLs</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 31 Mar 2026 20:18:02 GMT</pubDate>
-  </item><item>
     <title>Terms in TOC</title>
     <link>https://gate2027.com/TOC/Terms-in-TOC</link>
     <guid>https://gate2027.com/TOC/Terms-in-TOC</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 31 Mar 2026 20:18:02 GMT</pubDate>
+    <pubDate>Wed, 29 Apr 2026 18:10:06 GMT</pubDate>
   </item><item>
     <title>Turing Machine and Undecidibility</title>
     <link>https://gate2027.com/TOC/Turing-Machine-and-Undecidibility</link>
     <guid>https://gate2027.com/TOC/Turing-Machine-and-Undecidibility</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 31 Mar 2026 20:18:02 GMT</pubDate>
+    <pubDate>Wed, 29 Apr 2026 18:10:06 GMT</pubDate>
   </item><item>
     <title>Basics_and_Chomsky_Hierarchy_Long</title>
     <link>https://gate2027.com/TOC/long/Basics_and_Chomsky_Hierarchy_Long</link>
     <guid>https://gate2027.com/TOC/long/Basics_and_Chomsky_Hierarchy_Long</guid>
     <description><![CDATA[ Basics of Theory of Computation &amp; Chomsky Hierarchy 1. ]]></description>
-    <pubDate>Tue, 31 Mar 2026 20:18:02 GMT</pubDate>
+    <pubDate>Wed, 29 Apr 2026 18:10:06 GMT</pubDate>
+  </item><item>
+    <title>Regular_Expressions_Long</title>
+    <link>https://gate2027.com/TOC/long/Regular_Expressions_Long</link>
+    <guid>https://gate2027.com/TOC/long/Regular_Expressions_Long</guid>
+    <description><![CDATA[ Regular Expressions Tags: toc automata regular_expression long Introduction Operators and operands together form an expression. ]]></description>
+    <pubDate>Wed, 29 Apr 2026 18:10:06 GMT</pubDate>
   </item><item>
     <title>Basics_and_Chomsky_Hierarchy_Short</title>
     <link>https://gate2027.com/TOC/short/Basics_and_Chomsky_Hierarchy_Short</link>
     <guid>https://gate2027.com/TOC/short/Basics_and_Chomsky_Hierarchy_Short</guid>
     <description><![CDATA[ TOC Basics &amp; Chomsky Hierarchy (Short Notes) 1. Quick Definitions Grammar: Production rules ka set (S→aSb). ]]></description>
-    <pubDate>Tue, 31 Mar 2026 20:18:02 GMT</pubDate>
+    <pubDate>Wed, 29 Apr 2026 18:10:06 GMT</pubDate>
+  </item><item>
+    <title>Regular_Expressions_Short</title>
+    <link>https://gate2027.com/TOC/short/Regular_Expressions_Short</link>
+    <guid>https://gate2027.com/TOC/short/Regular_Expressions_Short</guid>
+    <description><![CDATA[ Regular Expressions (Short Notes) Tags: toc automata regular_expression short Regular expressions (regex) operators operands ke saath use hote hai regular sets (languages) ko represent karne ke liye. ]]></description>
+    <pubDate>Wed, 29 Apr 2026 18:10:06 GMT</pubDate>
   </item><item>
     <title>Valorant vods</title>
     <link>https://gate2027.com/valorant/Valorant-vods</link>
     <guid>https://gate2027.com/valorant/Valorant-vods</guid>
     <description><![CDATA[ # Tarik Reacts to 100 Thieves vs FUT Esports | PLAYOFFS | VCT Masters Shanghai 2024. ]]></description>
-    <pubDate>Tue, 31 Mar 2026 20:18:02 GMT</pubDate>
+    <pubDate>Wed, 29 Apr 2026 18:10:06 GMT</pubDate>
   </item><item>
-    <title>OS</title>
-    <link>https://gate2027.com/OS/OS</link>
-    <guid>https://gate2027.com/OS/OS</guid>
-    <description><![CDATA[  NIR BHAU Series Lecture 1 | Operating System | CPU Scheduling | Part 1 | GATE 2023 NIR BHAU Series Lecture 2 | Operating System | CPU Scheduling | Part 2 | FCFS | GATE 2023 NIR BHAU Series Lecture 3 | Operating System | CPU Scheduling | Part 3 | FCFS | GATE 2023 NIR BHAU Series Lecture 4 | Operatin... ]]></description>
-    <pubDate>Tue, 31 Mar 2026 20:18:02 GMT</pubDate>
+    <title>Finite automata and regular langauges</title>
+    <link>https://gate2027.com/TOC/Finite-automata-and-regular-langauges</link>
+    <guid>https://gate2027.com/TOC/Finite-automata-and-regular-langauges</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 29 Apr 2026 18:10:06 GMT</pubDate>
+  </item><item>
+    <title>PDA and CFLs</title>
+    <link>https://gate2027.com/TOC/PDA-and-CFLs</link>
+    <guid>https://gate2027.com/TOC/PDA-and-CFLs</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 29 Apr 2026 18:10:06 GMT</pubDate>
   </item><item>
     <title>Premptive scheduling</title>
     <link>https://gate2027.com/OS/Premptive-scheduling</link>
     <guid>https://gate2027.com/OS/Premptive-scheduling</guid>
     <description><![CDATA[ resource cheen leta hai types of premptive scheduling round robin SRTF shortest remaining time first/next *LRTF longest remaining time first/next Multilevel queue scheduling Multilevel feedback queue scheduling . ]]></description>
-    <pubDate>Tue, 31 Mar 2026 20:18:02 GMT</pubDate>
-  </item><item>
-    <title>SJF</title>
-    <link>https://gate2027.com/OS/SJF</link>
-    <guid>https://gate2027.com/OS/SJF</guid>
-    <description><![CDATA[ Shortest Job First / Shortest Job Next In SJF , Average waiting time is minimum. FCFS is tie breaker example 1: example 2: . ]]></description>
-    <pubDate>Tue, 31 Mar 2026 20:18:02 GMT</pubDate>
+    <pubDate>Wed, 29 Apr 2026 18:10:06 GMT</pubDate>
   </item>
     </channel>
   </rss>
