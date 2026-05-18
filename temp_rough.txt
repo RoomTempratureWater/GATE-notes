@@ -1,0 +1,89 @@
+Downloaded from: justpaste.it/mwems
+todays date: 4/05/2026
+https://www.youtube.com/watch?
+v=Ubab6STQZLc&list=PL3eEXnCBViH_ePbZWc1nKZuyfru6sgioD&index=3
+ 
+INSTRUCTIONS FOR GEMINI: i have placed some prompts in here for you starting with
+`GEMINI:`
+ 
+-----
+Finite Automata
+ 
+finite automata represents a regular set 
+ 
+FA = (Q, Σ, 𝛿 , q0, F)
+Σ  = input alphabets
+Q = set of states
+q0 = initial state
+F = set of final states
+𝛿   = transition function
+-----
+input (W) ---> FA (acceptor/recognizer)
+ 
+ if W belongs to L (valid strings), halts at final state
+if w not belongs to L (invalid strings), halts at non final state
+ 
+FA always halts
+-----                  
+             FA
+              /\
+            /    \
+      DFA    NFA
+                   /\
+                 /    \
+without E moves   with E moves
+ DFA and NFA are equivalent
+ 
+-----
+DFA = Q x E (sigma)
+1. 
+2. 
+ 
+1st is DFA, 2nd is not DFA GEMINI: explain
+-----
+what is DFA?
+delta = Q x sigma -> Q
+from every state in Q, for every input symbol in sigma, there is exactly one transition to next
+state in Q-----
+ 
+DFA for Set of all binary strings
+-----
+ 
+if every state is final state in DFA, then the language is sigma star
+ 
+-----
+ 
+Empty set over sigma = {a,b}
+L = {}
+ no path to a final state from this non final state
+also called a dead state.
+ 
+If every state is non final in DFA, then the language accepted by the DFA is {} (Φ)
+For every regular language accepted by only one (unique) DFA
+-----
+ 
+set of all binary strings starting with 1
+ 
+L = {1...}
+  
+-----
+set of all binary strings endingwith 1
+ 
+L = {...1}
+ 
+ 
+-----
+set of all strings containing b, sigma = {a,b}
+ 
+ 
+-----
+set of 2 length strings sigma = {a,b}
+ 
+-----
+ 
+sigma = {a,b}
+L = {w | w belongs {a,b}*, #a (w) = even}-----
+ 
+L = {w | w belongs to {a, b}*, w starts with a, w contains b}.
+ 
+-----
