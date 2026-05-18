@@ -26,6 +26,18 @@
 
 
 ---
+### Extracted Diagrams
+![[extracted_img_1_X11.png]]
+![[extracted_img_2_X14.png]]
+![[extracted_img_3_X18.png]]
+![[extracted_img_4_X22.png]]
+![[extracted_img_5_X27.png]]
+![[extracted_img_6_X29.png]]
+![[extracted_img_7_X33.png]]
+![[extracted_img_8_X35.png]]
+![[extracted_img_9_X39.png]]
+![[extracted_img_10_X41.png]]
+
 ## Relevant PYQs
 
 ### GATE CSE 2011 | Question: 8
