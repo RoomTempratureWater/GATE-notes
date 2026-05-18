@@ -17,3 +17,4 @@
 | DM | Recurrence Relations | 06/03/2026 | [[DM/long/Recurrence_Relations_Long.md]] | [[DM/short/Recurrence_Relations_Short.md]] | [Lecture](https://www.youtube.com/watch?v=JhvNvTzRAm0&list=PL3eEXnCBViH9TTRzwOcwbXtUVK8-NHZrJ) |
 | TOC | Basics & Chomsky Hierarchy | 31/03/2026 | [[TOC/long/Basics_and_Chomsky_Hierarchy_Long.md]] | [[TOC/short/Basics_and_Chomsky_Hierarchy_Short.md]] | [Lecture](https://www.youtube.com/watch?v=orOqKlq89_A&list=PL3eEXnCBViH_ePbZWc1nKZuyfru6sgioD&index=1&t=15s) |
 | TOC | Regular Expressions | 01/04/2026 | [[TOC/long/Regular_Expressions_Long.md]] | [[TOC/short/Regular_Expressions_Short.md]] | [Lecture](https://www.youtube.com/watch?v=7x5vpzb4tbA) |
+| TOC | Finite Automata & DFA | 04/05/2026 | [[TOC/long/Finite_Automata_Long.md]] | [[TOC/short/Finite_Automata_Short.md]] | [Lecture](https://www.youtube.com/watch?v=Ubab6STQZLc&list=PL3eEXnCBViH_ePbZWc1nKZuyfru6sgioD&index=3) |
